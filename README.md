@@ -31,11 +31,10 @@ npm run build
 ## 🏗️ Technical Stack
 
 - **Frontend**: Angular with TypeScript
-- **State Management**: NgRx for state management
-- **Styling**: Tailwind CSS for utility-first styling
+- **State Management**: RXJS for state management
+- **Styling**: bootstrap 5 and PrimeNg
 - **API Integration**: HttpClient for API communication
 - **Caching**: Custom caching layer for optimal performance
-- **Testing**: Jasmine and Karma
 
 ## 🌐 API Integration
 
@@ -103,11 +102,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [The Movie Database (TMDB)](https://www.themoviedb.org/) for providing the API
 - All contributors and maintainers
-
-## 📞 Support
-
-For support, please:
-
-1. Check the [documentation](./docs)
-2. Open an issue
-3. Reach out to maintainers
