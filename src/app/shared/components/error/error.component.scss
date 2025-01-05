@@ -1,0 +1,62 @@
+@import "../../../styles/abstracts/variables";
+npm install chart.js .error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 1 rem;
+  .error-content {
+    max-width: 500px;
+  }
+
+  .error-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+    &.pi-server {
+      color: $primary;
+    }
+    &.pi-wifi {
+      color: $warning;
+    }
+    &.pi-search {
+      color: $secondary;
+    }
+    &.pi-exclamation-circle {
+      color: $danger;
+    }
+  }
+
+  .error-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $text-primary;
+  }
+
+  .error-message {
+    color: $text-secondary;
+    margin-bottom: $spacing-lg;
+  }
+
+  .error-actions {
+    .p-button {
+      min-width: 120px;
+    }
+  }
+}
+
+.error-api {
+  background-color: rgba($primary, 0.05);
+}
+
+.error-network {
+  background-color: rgba($warning, 0.05);
+}
+
+.error-notFound {
+  background-color: rgba($secondary, 0.05);
+}
+
+.error-generic {
+  background-color: rgba($danger, 0.05);
+}

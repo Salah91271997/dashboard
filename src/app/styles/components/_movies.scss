@@ -1,0 +1,24 @@
+.movies-container {
+  .search-container {
+    background: $background-color;
+    border-radius: $border-radius;
+    box-shadow: $shadow-sm;
+    margin-bottom: $spacing-lg;
+
+    .search-form {
+      .p-input-icon-left {
+        width: 100%;
+
+        input {
+          padding-left: 2.5rem;
+          width: 100%;
+        }
+      }
+
+      .p-multiselect,
+      .p-dropdown {
+        width: 100%;
+      }
+    }
+  }
+}

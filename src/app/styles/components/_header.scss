@@ -1,0 +1,28 @@
+.app-header {
+  background: $primary-dark;
+  padding: $spacing-md 0;
+  box-shadow: $shadow-sm;
+
+  &__container {
+    @include flex(row, space-between, center);
+    max-width: map-get($breakpoints, "xl");
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+  }
+
+  &__logo {
+    color: $light;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($light, 10%);
+    }
+  }
+
+  &__nav {
+    @include flex(row, flex-end, center);
+    gap: $spacing-md;
+  }
+}

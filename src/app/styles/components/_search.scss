@@ -1,0 +1,72 @@
+// modules/movies/components/movie-search/movie-search.component.scss
+.search-container {
+  background: var(--surface-card);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+
+  .search-form {
+    padding: 1.5rem;
+
+    .search-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+
+    ::ng-deep {
+      .p-input-icon-left {
+        width: 100%;
+
+        input {
+          width: 100%;
+          padding: 0.75rem 1rem 0.75rem 2.5rem;
+          border-radius: 8px;
+          border: 1px solid var(--surface-border);
+          transition: all 0.2s;
+
+          &:hover {
+            border-color: var(--primary-color);
+          }
+
+          &:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.1);
+          }
+        }
+
+        i {
+          left: 0.75rem;
+          color: var(--text-color-secondary);
+        }
+      }
+
+      .p-dropdown,
+      .p-multiselect {
+        width: 100%;
+        border-radius: 8px;
+
+        .p-dropdown-label,
+        .p-multiselect-label {
+          padding: 0.75rem 1rem;
+        }
+
+        &:not(.p-disabled) {
+          &:hover {
+            border-color: var(--primary-color);
+          }
+
+          &.p-focus {
+            box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.1);
+            border-color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+}

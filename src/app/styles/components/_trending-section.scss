@@ -1,0 +1,16 @@
+.trending-section {
+  margin: $spacing-xl 0;
+
+  &__header {
+    @include flex(row, space-between, center);
+    margin-bottom: $spacing-lg;
+  }
+
+  &__carousel {
+    margin: 0 (-$spacing-sm);
+
+    .p-carousel-container {
+      padding: 0 $spacing-sm;
+    }
+  }
+}

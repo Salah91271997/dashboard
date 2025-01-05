@@ -1,0 +1,10 @@
+<div class="movies-container">
+  <app-movie-search></app-movie-search>
+
+  <app-movie-list
+    [movies]="(movies$ | async) || []"
+    [loading]="(loading$ | async) || false"
+    [totalResults]="(totalResults$ | async) || 0"
+  >
+  </app-movie-list>
+</div>

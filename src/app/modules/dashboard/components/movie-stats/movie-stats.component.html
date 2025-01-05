@@ -1,0 +1,23 @@
+<section class="movie-stats">
+  <div class="movie-stats__grid">
+    <div class="movie-stats__card">
+      <i class="pi pi-film movie-stats__icon"></i>
+      <div class="movie-stats__value">{{ stats?.totalMovies | number }}</div>
+      <div class="movie-stats__label">Total Movies</div>
+    </div>
+
+    <div class="movie-stats__card">
+      <i class="pi pi-star movie-stats__icon"></i>
+      <div class="movie-stats__value">
+        {{ stats?.averageRating | number : "1.1-1" }}
+      </div>
+      <div class="movie-stats__label">Average Rating</div>
+    </div>
+
+    <div class="movie-stats__card">
+      <i class="pi pi-trophy movie-stats__icon"></i>
+      <div class="movie-stats__value">{{ stats?.topRatedCount | number }}</div>
+      <div class="movie-stats__label">Top Rated Movies</div>
+    </div>
+  </div>
+</section>

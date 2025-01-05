@@ -1,0 +1,57 @@
+movie-details {
+  .movie-overlay {
+    background: linear-gradient(to top, rgba($primary-dark, 0.9), transparent);
+    padding: $spacing-lg;
+  }
+
+  .tagline {
+    color: rgba($light, 0.8);
+    font-style: italic;
+  }
+
+  .movie-poster {
+    box-shadow: $shadow;
+  }
+
+  .movie-info {
+    h5 {
+      color: $primary;
+      margin-bottom: $spacing-xs;
+      font-size: 1rem;
+    }
+    p {
+      color: $text-secondary;
+      margin: 0;
+    }
+  }
+
+  .cast-grid {
+    .cast-member {
+      img {
+        aspect-ratio: 1/1.5;
+        object-fit: cover;
+        transition: $transition-base;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      h6 {
+        font-size: 0.875rem;
+        margin: 0;
+      }
+
+      p {
+        font-size: 0.75rem;
+        margin: 0;
+      }
+    }
+  }
+
+  .p-tabview {
+    .p-tabview-panels {
+      padding: $spacing-md 0;
+    }
+  }
+}

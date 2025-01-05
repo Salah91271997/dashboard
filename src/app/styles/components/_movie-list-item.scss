@@ -1,0 +1,33 @@
+.movie-list-item {
+  background: $background-color;
+  transition: $transition-base;
+  box-shadow: $shadow-sm;
+  margin-bottom: $spacing-md;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow;
+  }
+
+  .movie-poster {
+    img {
+      aspect-ratio: 2/3;
+      object-fit: cover;
+    }
+  }
+
+  .movie-overview {
+    color: $text-secondary;
+    @include truncate(3);
+  }
+
+  .release-date {
+    color: $text-secondary;
+    font-size: 0.875rem;
+  }
+
+  .vote-count {
+    color: $text-secondary;
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,48 @@
+.auth-container {
+  min-height: calc(100vh - 64px); // Adjust based on header height
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--surface-ground);
+
+  .auth-card {
+    background: var(--surface-card);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      color: var(--text-color);
+      font-weight: 600;
+    }
+
+    .form-label {
+      color: var(--text-color);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    ::ng-deep {
+      .p-inputtext {
+        width: 100%;
+        padding: 0.75rem 1rem;
+      }
+
+      .p-password {
+        width: 100%;
+      }
+
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

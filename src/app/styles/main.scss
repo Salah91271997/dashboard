@@ -1,0 +1,20 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+@import "base/reset";
+@import "base/typography";
+
+@import "components/trending-section";
+@import "components/header";
+@import "components/dashboard";
+@import "components/search";
+
+@import "components/movies";
+@import "components/movie-list";
+@import "components/movie-list-item";
+@import "components/movie-details";
+@import "components/movie-card";
+@import "components/movie-stats";
+
+@import "vendors/primeng";

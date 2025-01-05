@@ -1,0 +1,72 @@
+:root {
+  --primary-color: #{$primary};
+  --primary-color-text: #{$light};
+  --surface-ground: #{$surface-color};
+  --surface-card: #{$background-color};
+  --surface-border: #{$border-color};
+  --text-color: #{$text-primary};
+  --text-color-secondary: #{$text-secondary};
+}
+
+.p-card {
+  border-radius: $border-radius;
+  box-shadow: $shadow-sm !important;
+
+  .p-card-title {
+    color: $primary-dark;
+  }
+}
+
+.p-carousel {
+  .p-carousel-indicators {
+    button {
+      background-color: rgba($primary, 0.3);
+      &.p-highlight {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.p-rating {
+  .p-rating-icon {
+    color: $secondary;
+    &.p-rating-icon-active {
+      color: $warning;
+    }
+  }
+}
+.movies-container {
+  .p-dropdown,
+  .p-multiselect {
+    .p-dropdown-label,
+    .p-multiselect-label {
+      padding: 0.5rem 0.75rem;
+    }
+  }
+
+  .p-rating {
+    .p-rating-icon {
+      font-size: 1rem;
+
+      &.pi-star {
+        color: $warning;
+      }
+
+      &.pi-star-o {
+        color: $text-secondary;
+      }
+    }
+  }
+
+  .p-paginator {
+    .p-paginator-pages {
+      .p-paginator-page {
+        &.p-highlight {
+          background: $primary;
+          color: $light;
+        }
+      }
+    }
+  }
+}

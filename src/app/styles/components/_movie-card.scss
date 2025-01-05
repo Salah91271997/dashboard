@@ -1,0 +1,145 @@
+// styles/components/_movie-card.scss
+.movie-card {
+  background: $background-color;
+  border-radius: $border-radius;
+  box-shadow: $shadow-sm;
+  transition: $transition-base;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow;
+  }
+
+  .movie-poster {
+    position: relative;
+    width: 100%;
+    padding-top: 150%; // Fixed 3:2 aspect ratio
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .rating-badge {
+      position: absolute;
+      top: $spacing-sm;
+      right: $spacing-sm;
+      background: rgba($primary-dark, 0.9);
+      color: $light;
+      padding: $spacing-xs $spacing-sm;
+      border-radius: $border-radius-sm;
+      font-weight: 500;
+      z-index: 2;
+    }
+  }
+
+  .movie-content {
+    padding: $spacing-md;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .movie-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: $spacing-xs;
+      @include truncate(1);
+      color: $text-primary;
+    }
+
+    .movie-year {
+      color: $text-secondary;
+      font-size: 0.9rem;
+      margin-bottom: $spacing-sm;
+    }
+
+    .movie-rating {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .rating-stars {
+        display: flex;
+        gap: 2px;
+      }
+    }
+  }
+}
+
+// Custom styling for PrimeNG carousel
+.p-carousel {
+  .p-carousel-container {
+    padding: $spacing-md 0;
+  }
+
+  .p-carousel-items-container {
+    margin: 0 -#{$spacing-sm};
+  }
+
+  .p-carousel-item {
+    padding: 0 $spacing-sm;
+  }
+
+  // Navigation buttons
+  .p-carousel-prev,
+  .p-carousel-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba($primary-dark, 0.9);
+    color: $light;
+    border: none;
+    margin: 0 $spacing-sm;
+    transition: $transition-base;
+
+    &:hover {
+      background: $primary-dark;
+      transform: scale(1.1);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($primary-dark, 0.2);
+    }
+
+    .pi {
+      font-size: 1.2rem;
+    }
+  }
+
+  // Indicators
+  .p-carousel-indicators {
+    margin-top: $spacing-md;
+    gap: 8px;
+
+    .p-carousel-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba($primary-dark, 0.3);
+      transition: $transition-base;
+      margin: 0;
+
+      &.p-highlight {
+        background: $primary-dark;
+        transform: scale(1.2);
+      }
+
+      button {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+}

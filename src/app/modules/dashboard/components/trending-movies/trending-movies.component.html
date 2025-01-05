@@ -1,0 +1,19 @@
+<div class="trending-section">
+  <p-carousel
+    [value]="(trendingMovies$ | async) ?? []"
+    [numVisible]="5"
+    [numScroll]="1"
+    [circular]="true"
+    [showNavigators]="true"
+    [showIndicators]="true"
+    [responsiveOptions]="responsiveOptions"
+    styleClass="custom-carousel"
+  >
+    <ng-template let-movie pTemplate="item">
+      <div class="carousel-item-wrapper">
+        <app-movie-card [movie]="movie" (click)="onMovieSelect(movie)">
+        </app-movie-card>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

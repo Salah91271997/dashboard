@@ -1,0 +1,29 @@
+<div class="movie-list-item p-3 border-round cursor-pointer">
+  <div class="d-flex gap-3">
+    <div class="movie-poster">
+      <img
+        [src]="getMoviePoster(movie)"
+        [alt]="movie.title"
+        class="border-round"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="flex-grow-1">
+      <h3 class="mb-2">{{ movie.title }}</h3>
+      <p-rating
+        [ngModel]="movie.vote_average / 2"
+        [readonly]="true"
+        [cancel]="false"
+        class="mb-2"
+      ></p-rating>
+      <p class="movie-overview mb-2">{{ movie.overview | truncate : 200 }}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <span class="release-date">
+          {{ movie.release_date | date : "mediumDate" }}
+        </span>
+        <span class="vote-count"> {{ movie.vote_count | number }} votes </span>
+      </div>
+    </div>
+  </div>
+</div>

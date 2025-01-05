@@ -1,0 +1,72 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4" style="max-width: 400px; width: 100%">
+    <h4 class="card-title text-center mb-3">Welcome to Movie Dashboard</h4>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="form-group mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          id="email"
+          type="email"
+          class="form-control"
+          formControlName="email"
+          [class.is-invalid]="
+            loginForm.get('email')?.invalid && loginForm.get('email')?.touched
+          "
+        />
+        <div
+          *ngIf="
+            loginForm.get('email')?.invalid && loginForm.get('email')?.touched
+          "
+          class="text-danger"
+        >
+          Please enter a valid email.
+        </div>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          id="password"
+          type="password"
+          class="form-control"
+          formControlName="password"
+          [class.is-invalid]="
+            loginForm.get('password')?.invalid &&
+            loginForm.get('password')?.touched
+          "
+        />
+        <div
+          *ngIf="
+            loginForm.get('password')?.invalid &&
+            loginForm.get('password')?.touched
+          "
+          class="text-danger"
+        >
+          Password is required.
+        </div>
+      </div>
+
+      <div class="d-grid gap-2">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="loginForm.invalid || loading"
+        >
+          {{ loading ? "Logging in..." : "Login" }}
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          (click)="onGuestLogin()"
+          [disabled]="loading"
+        >
+          Continue as Guest
+        </button>
+        <button type="button" class="btn btn-link" routerLink="/auth/signup">
+          Don't have an account? Sign up
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

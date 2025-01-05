@@ -1,0 +1,29 @@
+<div class="movie-card mx-2">
+  <div class="movie-poster">
+    <img [src]="getMoviePoster(movie)" [alt]="movie.title" loading="lazy" />
+    <span class="rating-badge">
+      {{ movie.vote_average.toFixed(1) }}
+    </span>
+  </div>
+
+  <div class="movie-content">
+    <h3 class="movie-title" [pTooltip]="movie.title">
+      {{ movie.title }}
+    </h3>
+    <div class="movie-year">
+      {{ movie.release_date | date : "yyyy" }}
+    </div>
+    <div class="movie-rating">
+      <div class="rating-stars">
+        <p-rating
+          [ngModel]="movie.vote_average / 2"
+          [readonly]="true"
+          [stars]="5"
+          [cancel]="false"
+        >
+        </p-rating>
+      </div>
+      <span class="vote-count"> {{ movie.vote_count | number }} votes </span>
+    </div>
+  </div>
+</div>

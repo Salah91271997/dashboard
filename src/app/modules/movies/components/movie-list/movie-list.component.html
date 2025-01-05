@@ -1,0 +1,40 @@
+<div class="movie-grid">
+  <p-dataView
+    #dv
+    [value]="movies"
+    [rows]="20"
+    [totalRecords]="totalResults"
+    [paginator]="true"
+    [loading]="loading"
+    [lazy]="true"
+    (onLazyLoad)="onPageChange($event)"
+  >
+    <ng-template pTemplate="header">
+      <div class="flex justify-content-end">
+        <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+      </div>
+    </ng-template>
+
+    <ng-template let-movie pTemplate="listItem">
+      <div *ngFor="let movieitem of movie" class="col-12">
+        <app-movie-list-item
+          [movie]="movieitem"
+          (click)="onMovieSelect(movieitem)"
+        >
+        </app-movie-list-item>
+      </div>
+    </ng-template>
+
+    <ng-template let-movie pTemplate="gridItem">
+      <div class="row">
+        <div *ngFor="let movieitem of movie" class="col-4 sm:col-6 lg:col-3">
+          <app-movie-card
+            [movie]="movieitem"
+            (click)="onMovieSelect(movieitem)"
+          >
+          </app-movie-card>
+        </div>
+      </div>
+    </ng-template>
+  </p-dataView>
+</div>

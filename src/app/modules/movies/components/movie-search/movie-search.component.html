@@ -1,0 +1,40 @@
+<div class="search-container p-4">
+  <form [formGroup]="searchForm" class="search-form">
+    <div class="row g-3">
+      <div class="col-4">
+        <span class="p-input-icon-left w-100">
+          <i class="pi pi-search"></i>
+          <input
+            pInputText
+            formControlName="query"
+            class="w-100"
+            placeholder="Search movies..."
+          />
+        </span>
+      </div>
+
+      <div class="col-md-4">
+        <p-multiSelect
+          [options]="genres"
+          formControlName="with_genres"
+          optionLabel="name"
+          optionValue="id"
+          placeholder="Select genres"
+          [maxSelectedLabels]="3"
+        >
+        </p-multiSelect>
+      </div>
+
+      <div class="col-md-4">
+        <p-dropdown
+          [options]="sortOptions"
+          formControlName="sort_by"
+          optionLabel="label"
+          optionValue="value"
+          placeholder="Sort by"
+        >
+        </p-dropdown>
+      </div>
+    </div>
+  </form>
+</div>

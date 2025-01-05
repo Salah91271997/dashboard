@@ -1,0 +1,79 @@
+<div class="movie-details p-4" *ngIf="movie$ | async as movie">
+  <div class="position-relative mb-4">
+    <img
+      [src]="getBackdropImage(movie)"
+      [alt]="movie.title"
+      class="w-100 border-round"
+      style="max-height: 400px; object-fit: cover"
+    />
+
+    <div class="position-absolute bottom-0 start-0 w-100 p-4 movie-overlay">
+      <div class="d-flex gap-4 align-items-end">
+        <img
+          [src]="getMoviePoster(movie)"
+          [alt]="movie.title"
+          class="movie-poster border-round"
+          style="width: 150px"
+        />
+
+        <div class="flex-grow-1 text-white">
+          <h1 class="mb-2">{{ movie.title }}</h1>
+          <p class="mb-2 tagline">{{ movie.tagline }}</p>
+          <div class="d-flex gap-3 align-items-center">
+            <p-rating
+              [ngModel]="movie.vote_average / 2"
+              [readonly]="true"
+              [cancel]="false"
+            >
+            </p-rating>
+            <span>({{ movie.vote_count }} votes)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p-tabView>
+    <p-tabPanel header="Overview">
+      <div class="p-3">
+        <p class="mb-4">{{ movie.overview }}</p>
+        <div class="d-flex gap-4 flex-wrap">
+          <div class="movie-info">
+            <h5>Release Date</h5>
+            <p>{{ movie.release_date | date : "mediumDate" }}</p>
+          </div>
+          <div class="movie-info">
+            <h5>Runtime</h5>
+            <p>{{ movie.runtime }} minutes</p>
+          </div>
+          <div class="movie-info">
+            <h5>Budget</h5>
+            <p>{{ movie.budget | currency }}</p>
+          </div>
+          <div class="movie-info">
+            <h5>Revenue</h5>
+            <p>{{ movie.revenue | currency }}</p>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+
+    <p-tabPanel header="Cast">
+      <div class="cast-grid p-3">
+        <p-dataView [value]="(movieCredits$ | async)?.cast || []" [rows]="8">
+          <ng-template let-actor pTemplate="listItem">
+            <div class="cast-member p-2">
+              <img
+                [src]="getProfileImage(actor)"
+                [alt]="actor.name"
+                class="w-100 mb-2 border-round"
+              />
+              <h6 class="mb-1">{{ actor.name }}</h6>
+              <p class="text-muted">{{ actor.character }}</p>
+            </div>
+          </ng-template>
+        </p-dataView>
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</div>
