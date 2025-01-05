@@ -1,6 +1,6 @@
 # Movie Dashboard
 
-A modern, responsive movie browsing application built with React, leveraging The Movie Database (TMDB) API for comprehensive movie information and discovery features.
+A modern, responsive movie browsing application built with Angular, leveraging The Movie Database (TMDB) API for comprehensive movie information and discovery features.
 
 ## 🚀 Quick Start
 
@@ -13,7 +13,7 @@ cp .env.example .env
 # Add your TMDB API key to .env
 
 # Start development server
-npm run dev
+npm start
 
 # Build for production
 npm run build
@@ -30,12 +30,12 @@ npm run build
 
 ## 🏗️ Technical Stack
 
-- **Frontend**: React with TypeScript
-- **State Management**: React Query for server state, Context API for local state
+- **Frontend**: Angular with TypeScript
+- **State Management**: NgRx for state management
 - **Styling**: Tailwind CSS for utility-first styling
-- **API Integration**: Axios for API communication
+- **API Integration**: HttpClient for API communication
 - **Caching**: Custom caching layer for optimal performance
-- **Testing**: Jest and React Testing Library
+- **Testing**: Jasmine and Karma
 
 ## 🌐 API Integration
 
@@ -48,13 +48,14 @@ This project uses The Movie Database (TMDB) API. You'll need to:
 
 ```
 src/
+├── app/             # Main application module
 ├── components/      # Reusable UI components
 ├── features/        # Feature-specific components
 ├── services/        # API and business logic
-├── hooks/          # Custom React hooks
-├── utils/          # Utility functions
-├── types/          # TypeScript definitions
-└── styles/         # Global styles
+├── pipes/           # Custom Angular pipes
+├── directives/      # Custom Angular directives
+├── models/          # TypeScript models
+└── styles/          # Global styles
 ```
 
 ## 🔧 Configuration
@@ -63,7 +64,7 @@ Key configuration files:
 
 - `.env`: Environment variables
 - `tailwind.config.js`: Tailwind CSS configuration
-- `vite.config.ts`: Vite bundler configuration
+- `angular.json`: Angular CLI configuration
 
 ## 📚 Documentation
 
