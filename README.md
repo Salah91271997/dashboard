@@ -1,27 +1,112 @@
-# MoviesDashbored
+# Movie Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+A modern, responsive movie browsing application built with React, leveraging The Movie Database (TMDB) API for comprehensive movie information and discovery features.
 
-## Development server
+## 🚀 Quick Start
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```bash
+# Install dependencies
+npm install
 
-## Code scaffolding
+# Set up environment variables
+cp .env.example .env
+# Add your TMDB API key to .env
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Start development server
+npm run dev
 
-## Build
+# Build for production
+npm run build
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🎯 Features
 
-## Running unit tests
+- **Movie Discovery**: Browse and search through an extensive movie database
+- **Advanced Filtering**: Filter movies by genre, release date, and ratings
+- **Responsive Design**: Optimized for all device sizes
+- **Dynamic Search**: Real-time search with debouncing
+- **Grid/List Views**: Toggle between different viewing layouts
+- **Detailed Information**: Comprehensive movie details including cast, crew, and related content
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🏗️ Technical Stack
 
-## Running end-to-end tests
+- **Frontend**: React with TypeScript
+- **State Management**: React Query for server state, Context API for local state
+- **Styling**: Tailwind CSS for utility-first styling
+- **API Integration**: Axios for API communication
+- **Caching**: Custom caching layer for optimal performance
+- **Testing**: Jest and React Testing Library
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🌐 API Integration
 
-## Further help
+This project uses The Movie Database (TMDB) API. You'll need to:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Register for an API key at [TMDB](https://www.themoviedb.org/documentation/api)
+2. Add your API key to the `.env` file
+
+## 📁 Project Structure
+
+```
+src/
+├── components/      # Reusable UI components
+├── features/        # Feature-specific components
+├── services/        # API and business logic
+├── hooks/          # Custom React hooks
+├── utils/          # Utility functions
+├── types/          # TypeScript definitions
+└── styles/         # Global styles
+```
+
+## 🔧 Configuration
+
+Key configuration files:
+
+- `.env`: Environment variables
+- `tailwind.config.js`: Tailwind CSS configuration
+- `vite.config.ts`: Vite bundler configuration
+
+## 📚 Documentation
+
+Detailed documentation is available in the `/docs` directory:
+
+- [Technical Architecture](./docs/technical-architecture.md)
+- [Component Documentation](./docs/components.md)
+- [API Integration Guide](./docs/api-integration.md)
+
+## 🧪 Testing
+
+```bash
+# Run unit tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run e2e tests
+npm run test:e2e
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/feature-name`
+3. Commit changes: `git commit -am 'Add new feature'`
+4. Push to branch: `git push origin feature/feature-name`
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [The Movie Database (TMDB)](https://www.themoviedb.org/) for providing the API
+- All contributors and maintainers
+
+## 📞 Support
+
+For support, please:
+
+1. Check the [documentation](./docs)
+2. Open an issue
+3. Reach out to maintainers
