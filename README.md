@@ -102,3 +102,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [The Movie Database (TMDB)](https://www.themoviedb.org/) for providing the API
 - All contributors and maintainers
+
+## Live
+
+https://sensational-taiyaki-2477fd.netlify.app/dashboard
