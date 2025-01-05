@@ -105,4 +105,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Live
 
-https://sensational-taiyaki-2477fd.netlify.app/dashboard
+https://sensational-taiyaki-2477fd.netlify.app/
